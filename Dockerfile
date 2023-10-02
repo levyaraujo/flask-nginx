@@ -12,4 +12,4 @@ RUN poetry config virtualenvs.create false && poetry install --no-dev
 COPY . .
 
 # Run Gunicorn without the virtual environment
-CMD gunicorn --bind 0.0.0.0:5000 "app:create_app()"
+CMD gunicorn --bind 0.0.0.0:80 "app:create_app()"
